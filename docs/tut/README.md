@@ -194,8 +194,56 @@ $ xilinx@216.47.144.102's password:
 5. Once you login, you need to upload the notebook **matmul.ipynb** provided to you. Click on upload and find your notebook file under lab3/part1 directory
 ![1](../assets/fig/39.png)
 
-
+6. Double click on **mamtmul.ipynb** notebook to open it
 ![1](../assets/fig/40.png)
+
+## Part 5 : understanding the matmul.ipynb notebook 
+This notebook will perform the matrix multiplication on the Pynq-Z2 FPGA, overlay a hardware design, and compare the performance of the matrix multiplication between the FPGA's Programmable Logic (PL) and the Processing System (PS). Here's an explanation of each part of the code:
+1. **Importing required libraries**
+```
+import pynq
+import time
+import numpy as np
+```
+pynq: provides python bindings to control the Pynq-Z2 board.  
+time: to measure the execution time (latency).  
+numpy: for array manipulation  
+
+2. **Overlaying the Bitstream**
+```
+bitstream = "/home/xilinx/matmul.bit"
+overlay = pynq.Overlay(bitstream)
+```
+**bitstream** : this file contains the hardware configuration for the targeted FPGA
+**pynq.overlay** : loads the bitstream onto the FPGA Programmable Logic (PL) and configers the hardware  
+You can learn more about overlays from this site [site](https://pynq.readthedocs.io/en/v3.0.0/overlay_design_methodology/overlay_tutorial.html)
+
+To check your overlay results 
+```
+overlay?
+```
+3. **Accessing the top-level design and checking the details**
+```
+dut = overlay.matmul_0
+dut?
+```
+
+4. **Creating Buffers for I/O**
+```
+A = pynq.allocate((100, 150), dtype='int16')
+B = pynq.allocate((150, 200), dtype='int16')
+C = pynq.allocate((100, 200), dtype='int16')
+```
+**pynq.allocate** : Allocates memory on both the host (CPU) and device (FPGA) to transfer data between them.
+
+5. **Initialising Input Arrays with Random Values:**
+
+```
+A[:] = np.random.randint(0, 100, size=(100, 150), dtype=np.int16)
+B[:] = np.random.randint(0, 100, size=(150, 200), dtype=np.int16)
+```
+
+
 ![1](../assets/fig/41.png)
 ![1](../assets/fig/42.png)
 ![1](../assets/fig/43.png)
