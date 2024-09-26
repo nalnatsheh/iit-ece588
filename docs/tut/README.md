@@ -15,7 +15,7 @@ vivado
 Vivado Welcome widnow will pop-up 
 ![1](../assets/fig/1.png)
 
-2. Click on **Create Project** from the Quick Start menu, a new window will pop-up, and click **Next**
+2. Click on **Create Project** from the Quick Start menu, a new window will pop-up, click **Next**
 ![1](../assets/fig/2.png)
 
 3. Leave the **Project Name** as **project_1**, and the location under your lab3/part1 directory, and click **Next**
@@ -78,7 +78,7 @@ Vivado Welcome widnow will pop-up
 22. Select **S_AXI_HP0** with the Master interface og **m_axi_mem1**
 ![1](../assets/fig/22.png)
 
-23. Select **S_AXI_HP1** with the Master interface og **m_axi_mem2**
+23. Select **S_AXI_HP1** with the Master interface of **m_axi_mem2**
 ![1](../assets/fig/23.png)
 
 24. Click on **OK**, you should see the diagram like below : 
