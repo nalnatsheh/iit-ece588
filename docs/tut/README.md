@@ -93,7 +93,7 @@ Vivado Welcome widnow will pop-up
 27. Now to create a HDL wrapper, click on **design_1** → **Create HDL Wrapper**
 ![1](../assets/fig/27.png)
 
-28. A new window will pop-up, select **Let Vivado mange wrapper and auto-update**
+28. A new window will pop-up, select **Let Vivado manage wrapper and auto-update**
 ![1](../assets/fig/28.png)
 
 29. To generate the bitstream, click on **Generate Bitstream** under **PROGRAM AND DEBUG** menu
