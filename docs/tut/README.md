@@ -79,10 +79,10 @@ Since, our HLS IP has two bundles, we need to create 2 AXI slave buses in the co
 20. Click on **OK**, you should see the processing_system7_0 IP modification like below : 
 ![1](../assets/fig/20.png)
 
-21. Click on **Run Connection Automation**
+21. To connect the PS and the PL, click on **Run Connection Automation**
 ![1](../assets/fig/21.png)
 
-22. Select **S_AXI_HP0** with the Master interface og **m_axi_mem1**
+22. We need to map the IP ports to the two AXI HP slave buses in the PS, select **S_AXI_HP0** with the Master interface of **m_axi_mem1**
 ![1](../assets/fig/22.png)
 
 23. Select **S_AXI_HP1** with the Master interface of **m_axi_mem2**
