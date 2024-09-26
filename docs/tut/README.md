@@ -162,7 +162,6 @@ scp -rP x588 matmul.hwh matmul.bit xilinx@216.47.144.102:/home/xilinx/
 $ xilinx@216.47.144.102's password:
 ```
 
-![1](../assets/fig/34.png)
 ![1](../assets/fig/35.png)
 ![1](../assets/fig/36.png)
 ![1](../assets/fig/37.png)
