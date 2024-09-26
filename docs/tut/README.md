@@ -159,12 +159,16 @@ mv design_1_wrapper.bit design_1.bit
 ```
 **NOTE : I HAVE NO CLUE WHY VIVADO TOOL HAVE THIS REQUIRMENT, AND WHY THEY DON'T GENERATE BOTH FILES WITH THE SAME NAME AUTOMATICALLY!!!! GO FIGURE**
 
-6. Now, we need to copy both files to your PYNQ-Z2 board , to do so type the follwoing command : 
+6. Now, we need to copy both files to the PYNQ-Z2 board , to do so type the follwoing command : 
 ```
 scp -rP x588 matmul.hwh matmul.bit xilinx@216.47.144.102:/home/xilinx/
 ```
-**NOTE : for the port number,**
+**NOTE : for you need to change x with your group number** for example, you are in group number 1, the below command will copy the files to PYNQ-Z2 board number 1. 
+```
+scp -rP 1588 matmul.hwh matmul.bit xilinx@216.47.144.102:/home/xilinx/
+```
 
+7. It will ask you for a password, the password is **xilinx** (yes all small letters, no spaces, no numbers, no special characters!) 
 ```
 $ xilinx@216.47.144.102's password:
 ```
