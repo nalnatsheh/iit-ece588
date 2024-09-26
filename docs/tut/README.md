@@ -23,7 +23,7 @@ mv design_1.hwh matmul.hwh
 ```
 
 ```
-scp -rP 1588 ./project_1/project_1.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh xilinx@216.47.144.102:/home/xilinx/
+scp -rP 1588 matmul.hwh xilinx@216.47.144.102:/home/xilinx/
 ```
 
 ```
@@ -37,5 +37,5 @@ mv design_1_wrapper.bit design_1.bit
 ```
 
 ```
-scp -rP 1588 ./project_1/project_1.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh xilinx@216.47.144.102:/home/xilinx/
+scp -rP 1588 mamtmul.bit xilinx@216.47.144.102:/home/xilinx/
 ```
