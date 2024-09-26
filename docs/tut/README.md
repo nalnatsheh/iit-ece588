@@ -45,7 +45,7 @@ Vivado Welcome widnow will pop-up
 11. From the **IP Navigator** window, click on **Create Block Design**
 ![1](../assets/fig/11.png)
 
-12. Leave the Design name as **design_1**
+12. Leave the Design name as **design_1**  
 ![1](../assets/fig/12.png)
 
 13. From the Diagram window, click on **Add IP**
@@ -103,7 +103,7 @@ The **No Implementation Results Avaialble** window will pop-up, click **Yes**
 30. The below window will popup, click **OK**
 ![1](../assets/fig/31.png)
 
-31. Vivado tool will now run sythesis → implementation and then it will generate the **bitstream**, when the Bitstream Generation is Completed, you will see the below window. Click on **Open Implemented Design**
+31. Vivado tool will now run sythesis → implementation and then it will generate the **bitstream**, when the Bitstream Generation is Completed, you will see the below window. Click on **Open Implemented Design**  
 ![1](../assets/fig/32.png)
 
 32. You will see xx, along with the Design Timing Summary.
