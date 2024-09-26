@@ -35,7 +35,7 @@ mv design_1.hwh matmul.hwh
 mv design_1_wrapper.bit design_1.bit
 ```
 
-``
+```
 scp -rP 1588 matmul.hwh matmul.bit matmul.ipynb xilinx@216.47.144.102:/home/xilinx/
 ```
 
