@@ -98,19 +98,19 @@ Vivado Welcome widnow will pop-up
 
 29. To generate the bitstream, click on **Generate Bitstream** under **PROGRAM AND DEBUG** menu
 The **No Implementation Results Avaialble** window will pop-up, click **Yes**
-![1](../assets/fig/29.png)
-
-30. The below window will popup, click **OK**
 ![1](../assets/fig/30.png)
 
-31. Vivado tool will now run sythesis → implementation and then it will generate the **bitstream**, when the Bitstream Generation is Completed, you will see the below window. Click on **Open Implemented Design**
+30. The below window will popup, click **OK**
 ![1](../assets/fig/31.png)
 
-32. You will see xx, along with the Design Timing Summary.
+31. Vivado tool will now run sythesis → implementation and then it will generate the **bitstream**, when the Bitstream Generation is Completed, you will see the below window. Click on **Open Implemented Design**
 ![1](../assets/fig/32.png)
 
-33. Navigate to the **Power**, and you should see the summary window like below :
+32. You will see xx, along with the Design Timing Summary.
 ![1](../assets/fig/33.png)
+
+33. Navigate to the **Power**, and you should see the summary window like below :
+![1](../assets/fig/34.png)
 
 34. Quit Vivado!
 
