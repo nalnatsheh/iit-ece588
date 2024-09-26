@@ -173,6 +173,9 @@ scp -rP 1588 matmul.hwh matmul.bit xilinx@216.47.144.102:/home/xilinx/
 $ xilinx@216.47.144.102's password:
 ```
 
+## Part 4 : Accelearte the HLS IP on PYNQ-Z2 board, and 
+
+1. Login to your account on Hunmin server, at this point I believe you know how to get to the below image and login to your account! (Establish a vncserver connection, and type your password and the generated port number). If you absolutly have no clue, navigate to this [site](http://www.ece.iit.edu/ecesysdocs/)
 ![1](../assets/fig/35.png)
 ![1](../assets/fig/36.png)
 ![1](../assets/fig/37.png)
