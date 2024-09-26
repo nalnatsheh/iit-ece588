@@ -39,7 +39,7 @@ Vivado Welcome widnow will pop-up
 9. Navigate and choose the directory **solution1**
 ![1](../assets/fig/9.png)
 
-10. You should see the HLS IP like the one below (if you see it greyed out, go back and check that you selected the correct part number), click on **OK**
+10. You should see the HLS IP like the one below (the IP in ORANGE, however if you see it in GREY color, go back and check that you selected the correct part number), click on **OK**
 ![1](../assets/fig/10.png)
 
 11. From the **IP Navigator** window, click on **Create Block Design**
