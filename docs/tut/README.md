@@ -175,12 +175,26 @@ $ xilinx@216.47.144.102's password:
 
 ## Part 4 : Accelearte the HLS IP on PYNQ-Z2 board, and 
 
-1. Login to your account on Hunmin server, at this point I believe you know how to get to the below image and login to your account! (Establish a vncserver connection, and type your password and the generated port number). If you absolutly have no clue, navigate to this [site](http://www.ece.iit.edu/ecesysdocs/)
+1. Login to your account on Hunmin server, at this point I will trust that you know how to get to the below image and login to your account! (Establish a vncserver connection, and type your password and the generated port number). If you absolutely have no clue, navigate to this [site](http://www.ece.iit.edu/ecesysdocs/) .
 ![1](../assets/fig/35.png)
+
+2. Invoke the web browser **Firefox**, click on **Applications** → **Firefox**
 ![1](../assets/fig/36.png)
+
+3. Navigate to **216.47.144.102:588xx**
+**NOTE : for you need to change xx with your group number** for example, you are in group number 1, the below command will copy the files to PYNQ-Z2 board number 1.
+```
+216.47.144.102:58801
+```
 ![1](../assets/fig/37.png)
+
+4. You should see Jupyter Notebook Homepage like below, the password is **xilinx** (yes all small letters, no spaces, no numbers, no special characters!) 
 ![1](../assets/fig/38.png)
+
+5. Once you login, you need to upload the notebook **matmul.ipynb** provided to you. Click on upload and find your notebook file under lab3/part1 directory
 ![1](../assets/fig/39.png)
+
+
 ![1](../assets/fig/40.png)
 ![1](../assets/fig/41.png)
 ![1](../assets/fig/42.png)
