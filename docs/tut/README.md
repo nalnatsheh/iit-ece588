@@ -135,16 +135,16 @@ $ ./project_1/project_1.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
 
 2. Copy the hardware handoff to your lab3/part1 directory by typing the command below  :
 ```
-cp ./project_1/project_1.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh .
+$ cp ./project_1/project_1.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh .
 ```
 
 3. To find the bitstream, type the below command: 
 ```
 find . -type f -name "*.bit"
 ```
-
+You should see the output as below  :
 ```
-./project_1/project_1.runs/impl_1/design_1_wrapper.bit
+$ ./project_1/project_1.runs/impl_1/design_1_wrapper.bit
 ```
 
 4. Copy the bitstream to your lab3/part1 directory by typing the command below  :
