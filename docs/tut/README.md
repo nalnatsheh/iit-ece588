@@ -39,3 +39,8 @@ mv design_1_wrapper.bit design_1.bit
 ```
 scp -rP 1588 mamtmul.bit xilinx@216.47.144.102:/home/xilinx/
 ```
+```
+xilinx@216.47.144.102's password:
+matmul.hwh                                                                                                                                                                       100%  299KB   6.8MB/s   00:00    
+matmul.bit                                                                                                                                                                       100% 3951KB   7.9MB/s   00:00    
+```
