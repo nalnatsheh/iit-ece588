@@ -152,7 +152,7 @@ $ ./project_1/project_1.runs/impl_1/design_1_wrapper.bit
 cp ./project_1/project_1.runs/impl_1/design_1_wrapper.bit .
 ```
 
-5. The hardware handoff and the bitstream name needs to match, hence let's change them to **matmul.hwh**, and **matmul.bit**, type the below commands to do so  :
+5. Xilinx have a requirment that the hardware handoff and the bitstream files names needs to match, hence let's change them to **matmul.hwh**, and **matmul.bit** respectively, to do so  type the below commands seperatley  :
 ```
 mv design_1.hwh matmul.hwh
 mv design_1_wrapper.bit design_1.bit
