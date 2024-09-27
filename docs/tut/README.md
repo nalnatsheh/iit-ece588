@@ -9,40 +9,40 @@ make ip
 Vitis will run the flow simulation synthesis cosim export_ip  
 export_ip : exports and packages the generated RTL code as a packaged IP for use in the Vivado Design Suite. 
 
-## Part 2 : Generate the bitstream (.bit) and hardware handoff (.hwh) files
+## Part 2 : Generate the bitstream (.bit) and the hardware handoff (.hwh) files
 
-### Create a New Project
-a. Invoke Vivado by simply typing vivado in the terminal
+### A. Create a New Project
+1. Invoke Vivado by simply typing vivado in the terminal
 ```
 vivado
 ```
 Vivado Welcome widnow will pop-up 
 ![1](../assets/fig/1.png)
 
-b. Click on **Create Project** from the Quick Start menu, a new window will pop-up, click **Next**
+2. Click on **Create Project** from the Quick Start menu, a new window will pop-up, click **Next**
 ![1](../assets/fig/2.png)
 
-c. Leave the **Project Name** as **project_1**, and the location under your lab3/part1 directory, and click **Next**
+3. Leave the **Project Name** as **project_1**, and the location under your **lab3/part1** directory, and click **Next**
 ![1](../assets/fig/3.png)
 
-d. Click on **RTL Project** and select "Do not specify sources at this time", and click **Next**
+4. Click on **RTL Project** and select "Do not specify sources at this time", and click **Next**
 ![1](../assets/fig/4.png)
 
-e. From the search button type the part number : **xc7z020clg400-1**, and click **Next**
+5. From the search button type the part number : **xc7z020clg400-1** (This is the FPGA Device number on the PYNQ-Z2 boards), and click **Next**
 ![1](../assets/fig/5.png)
 
-f. The new project summary should look like below, click **Finish**
+6. The new project summary should look like below, click **Finish**
 ![1](../assets/fig/6.png)
 
 
-### gg
+### B. Add the HLS IP, and Create a Block Design
 7. From the **Project Manager** window, click on **IP Catalog**
 ![1](../assets/fig/7.png)
 
 8. Right click on **Vivado Repository** and choose **Add Repository**
 ![1](../assets/fig/8.png)
 
-9. Navigate and choose the directory **solution1**
+9. Navigate and choose the directory **solution1** (the one under lab3/part1/vitis.prj directory)
 ![1](../assets/fig/9.png)
 
 10. You should see the HLS IP like the one below (the IP in ORANGE, however if you see it in GREY color, go back and check that you selected the correct part number), click on **OK**
