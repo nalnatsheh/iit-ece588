@@ -1,35 +1,41 @@
-# Tutorial I: On-board Implementation of Case Study I (Matrix Multiplication): 
+# Tutorial I: On-board FPGA Acceleration of Case Study I (Matrix Multiplication): 
 
-## Part 1 : 
+## Part 1 : Create the HLS IP
+1. Under your lab3/part1 directory, type the below command : 
 
 ```
-make vitis
+make ip
 ```
+Vitis will run the flow simulation synthesis cosim export_ip  
+export_ip : exports and packages the generated RTL code as a packaged IP for use in the Vivado Design Suite. 
 
 ## Part 2 : Generate the bitstream (.bit) and hardware handoff (.hwh) files
 
-1. Invoke Vivado by simply typing vivado in the terminal
+### Create a New Project
+a. Invoke Vivado by simply typing vivado in the terminal
 ```
 vivado
 ```
 Vivado Welcome widnow will pop-up 
 ![1](../assets/fig/1.png)
 
-2. Click on **Create Project** from the Quick Start menu, a new window will pop-up, click **Next**
+b. Click on **Create Project** from the Quick Start menu, a new window will pop-up, click **Next**
 ![1](../assets/fig/2.png)
 
-3. Leave the **Project Name** as **project_1**, and the location under your lab3/part1 directory, and click **Next**
+c. Leave the **Project Name** as **project_1**, and the location under your lab3/part1 directory, and click **Next**
 ![1](../assets/fig/3.png)
 
-4. Click on **RTL Project** and select "Do not specify sources at this time", and click **Next**
+d. Click on **RTL Project** and select "Do not specify sources at this time", and click **Next**
 ![1](../assets/fig/4.png)
 
-5. From the search button type the part number : **xc7z020clg400-1**, and click **Next**
+e. From the search button type the part number : **xc7z020clg400-1**, and click **Next**
 ![1](../assets/fig/5.png)
 
-6. The new project summary should look like below, click **Finish**
+f. The new project summary should look like below, click **Finish**
 ![1](../assets/fig/6.png)
 
+
+### gg
 7. From the **Project Manager** window, click on **IP Catalog**
 ![1](../assets/fig/7.png)
 
