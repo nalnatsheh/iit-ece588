@@ -28,7 +28,7 @@ Vivado Welcome widnow will pop-up
 4. Click on **RTL Project** and select "Do not specify sources at this time", and click **Next**
 ![1](../assets/fig/4.png)
 
-5. From the search button type the part number : **xc7z020clg400-1** (This is the FPGA Device number on the PYNQ-Z2 boards), and click **Next**
+5. From the search button type the part number : **xc7z020clg400-1** (This is the FPGA Device number of the PYNQ-Z2 board), and click **Next**
 ![1](../assets/fig/5.png)
 
 6. The new project summary should look like below, click **Finish**
