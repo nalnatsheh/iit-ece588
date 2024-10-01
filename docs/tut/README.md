@@ -161,7 +161,7 @@ cp ./project_1/project_1.runs/impl_1/design_1_wrapper.bit .
 5. Xilinx have a requirment that the hardware handoff and the bitstream files names needs to match to run on the FPGA board, hence let's change them to **matmul.hwh**, and **matmul.bit** respectively, to do so  type the below commands seperatley  :
 ```
 mv design_1.hwh matmul.hwh
-mv design_1_wrapper.bit design_1.bit
+mv design_1_wrapper.bit matmul.bit
 ```
 **NOTE : I HAVE NO CLUE WHY VIVADO TOOL HAVE THIS REQUIRMENT, AND WHY THEY DON'T GENERATE BOTH FILES WITH THE SAME NAME AUTOMATICALLY!!!! GO FIGURE**
 
