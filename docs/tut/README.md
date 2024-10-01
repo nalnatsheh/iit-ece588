@@ -1,6 +1,6 @@
 # Tutorial I: On-board FPGA Acceleration of Case Study I (Matrix Multiplication): 
 
-## **Part 1 : Create the HLS IP**
+## **Part 1 : Create the Matrix Multipliation IP via the VitisHLS Solution**
 1. Under your lab3/part1 directory, type the below command : 
 
 ```
