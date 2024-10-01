@@ -36,40 +36,38 @@ Vivado Welcome widnow will pop-up
 
 
 ### B. Add the HLS IP, and Create a Block Design
-7. From the **Project Manager** window, click on **IP Catalog**
+1. From the **Project Manager** window, click on **IP Catalog**
 ![1](../assets/fig/7.png)
 
-8. Right click on **Vivado Repository** and choose **Add Repository**
+2. Right click on **Vivado Repository** and choose **Add Repository**
 ![1](../assets/fig/8.png)
 
-9. Navigate and choose the directory **solution1** (the one under lab3/part1/vitis.prj directory)
+3. Navigate and choose the directory **solution1** (the one under lab3/part1/vitis.prj directory)
 ![1](../assets/fig/9.png)
 
-10. You should see the HLS IP like the one below (the IP in ORANGE, however if you see it in GREY color, go back and check that you selected the correct part number), click on **OK**
+4. You should see the HLS IP like the one below (the IP in ORANGE, however if you see it in GREY color, go back and check that you selected the correct part number), click on **OK**
 ![1](../assets/fig/10.png)
 
-11. From the **IP Navigator** window, click on **Create Block Design**
+5. From the **IP Navigator** window, click on **Create Block Design**
 ![1](../assets/fig/11.png)
 
-12. Leave the Design name as **design_1**  
+6. Leave the Design name as **design_1**  
 ![1](../assets/fig/12.png)
 
-13. From the Diagram window, click on **Add IP**
+7. From the Diagram window, click on **Add IP**
 ![1](../assets/fig/13.png)
 
-14. Type **hls** to choose your HLS IP (Matmul) that was generated from Part 1
+8. Type **hls** to choose your HLS IP (Matmul) that was generated from Part 1
 ![1](../assets/fig/14.png)
-
-15. You should see the matmul_0 HLS IP added like below : 
+You should see the matmul_0 HLS IP added like below : 
 ![1](../assets/fig/15.png)
 
-16. Click on **Add IP** again, and type **q7** to bring the ZYNQ7 processing system 
+9. Click on **Add IP** again, and type **q7** to bring the ZYNQ7 processing system 
 ![1](../assets/fig/16.png)
-
-17. You should see the processing_system7_0 IP added like below : 
+You should see the processing_system7_0 IP added like below : 
 ![1](../assets/fig/17.png)
 
-18. If you take a look at the **matmul.cpp** code, we initallly created the IP interfaces with two bundles, where one of the inputs has its own bundle **mem2**, and the other input share a bundle with the output **mem1**. The code below to refresh your memory : 
+10. If you take a look at the **matmul.cpp** code, we initallly created the IP interfaces with two bundles, where one of the inputs has its own bundle **mem2**, and the other input share a bundle with the output **mem1**. The code below to refresh your memory : 
 ```
 #pragma HLS interface mode = m_axi depth = 1 port = Matrix_A_DRAM offset = slave bundle = mem1
 #pragma HLS interface mode = m_axi depth = 1 port = Matrix_B_DRAM offset = slave bundle = mem2
@@ -79,53 +77,54 @@ Vivado Welcome widnow will pop-up
 Since, our HLS IP has two bundles, we need to create 2 AXI slave buses in the controller. Double click on the processing_system7_0 IP, and navigate to **PS-PL Configuration** → **HP Slave AXI interface** and select **AXI HP0 interface**, and **AXI HP1 interface**
 ![1](../assets/fig/18.png)
 
-19. Navigate to **Clock Configuration** → **PL Fabric Clocks** and change the **FCLK_CLK0** to **100MHz**
+11. Navigate to **Clock Configuration** → **PL Fabric Clocks** and change the **FCLK_CLK0** to **100MHz**
 ![1](../assets/fig/19.png)
 
-20. Click on **OK**, you should see the processing_system7_0 IP modification like below : 
+12. Click on **OK**, you should see the processing_system7_0 IP modification like below : 
 ![1](../assets/fig/20.png)
 
-21. To connect the PS and the PL, click on **Run Connection Automation**
+13. To connect the PS and the PL, click on **Run Connection Automation**
 ![1](../assets/fig/21.png)
 
-22. We need to map the IP ports to the two AXI HP slave buses in the PS, select **S_AXI_HP0** with the Master interface of **m_axi_mem1**
+14. We need to map the IP ports to the two AXI HP slave buses in the PS, select **S_AXI_HP0** with the Master interface of **m_axi_mem1**
 ![1](../assets/fig/22.png)
 
-23. Select **S_AXI_HP1** with the Master interface of **m_axi_mem2**
+15. Select **S_AXI_HP1** with the Master interface of **m_axi_mem2**
 ![1](../assets/fig/23.png)
 
-24. Click on **OK**, you should see the diagram like below : 
+16. Click on **OK**, you should see the diagram like below : 
 ![1](../assets/fig/24.png)
 
-25. To validte our block design, click on **design_1** → **Validate Design**
+17. To validte our block design, click on **design_1** → **Validate Design**
 ![1](../assets/fig/25.png)
 
-26. You should see the Validation successful window like below:  
+18. You should see the Validation successful window like below:  
 ![1](../assets/fig/26.png)
 
-27. Now to create a HDL wrapper, click on **design_1** → **Create HDL Wrapper**
+### C. Create a HDL Wrapper and generate the bitstream
+1. Now to create a HDL wrapper, click on **design_1** → **Create HDL Wrapper**
 ![1](../assets/fig/27.png)
 
-28. A new window will pop-up, select **Let Vivado manage wrapper and auto-update** click **OK**
+2. A new window will pop-up, select **Let Vivado manage wrapper and auto-update** click **OK**
 ![1](../assets/fig/28.png)
 
-29. To generate the bitstream, click on **Generate Bitstream** under **PROGRAM AND DEBUG** menu
+3. To generate the bitstream, click on **Generate Bitstream** under **PROGRAM AND DEBUG** menu
 The **No Implementation Results Avaialble** window will pop-up, click **Yes**
 ![1](../assets/fig/30.png)
 
-30. The below window will popup, click **OK**
+4. The below window will popup, click **OK**
 ![1](../assets/fig/31.png)
 
-31. Vivado tool will now run sythesis → implementation and then it will generate the **bitstream**, when the Bitstream Generation is Completed, you will see the below window. Click on **Open Implemented Design**  
+5. Vivado tool will now run sythesis → implementation and then it will generate the **bitstream**, when the Bitstream Generation is Completed, you will see the below window. Click on **Open Implemented Design**  
 ![1](../assets/fig/32.png)
 
-32. You will see xx, along with the Design Timing Summary.
+6. You will see xx, along with the Design Timing Summary.
 ![1](../assets/fig/33.png)
 
-33. Navigate to the **Power**, and you should see the summary window like below :
+7. Navigate to the **Power**, and you should see the summary window like below :
 ![1](../assets/fig/34.png)
 
-34. Quit Vivado!
+8. Quit Vivado!
 
 ## Part 3 : Copy the bitstream and the hardware handoff to FPGA board
 You should be under lab3/part1 directory, now we need to find the **.bit** and **.hwh** files and copy them to our PYNQ-Z2 Board
