@@ -1,15 +1,15 @@
 # Tutorial I: On-board FPGA Acceleration of Case Study I (Matrix Multiplication): 
 
-## Part 1 : Create the HLS IP
+## **Part 1 : Create the HLS IP**
 1. Under your lab3/part1 directory, type the below command : 
 
 ```
 make ip
 ```
-Vitis will run the flow simulation synthesis cosim export_ip  
+Vitis will run the flow of : simulation→synthesis→export_ip  
 export_ip : exports and packages the generated RTL code as a packaged IP for use in the Vivado Design Suite. 
 
-## Part 2 : Generate the bitstream (.bit) and the hardware handoff (.hwh) files
+## **Part 2 : Generate the bitstream (.bit) and the hardware handoff (.hwh) files**
 
 ### A. Create a New Project
 1. Invoke Vivado by simply typing vivado in the terminal
