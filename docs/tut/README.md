@@ -189,9 +189,7 @@ A. Acces Jupyter Notebook and upload matmul.ipynb notebook :
 3. Navigate to **216.47.144.102:588xx**  
 **NOTE : you need to change xx with your group number** for example, you are in group number 1, the below address will access PYNQ-Z2 board number 1.
 ```
-216.47.144.102:58801n of the matrix multiplication accelerator
-
-Accelerating on FPGA
+216.47.144.102:58801
 ```
 ![1](../assets/fig/37.png)
 
