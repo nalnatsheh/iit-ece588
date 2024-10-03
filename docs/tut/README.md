@@ -221,7 +221,7 @@ overlay = pynq.Overlay(bitstream)
 ```
 **bitstream** : this file contains the hardware configuration for the targeted FPGA  
 **pynq.overlay** : loads the bitstream onto the FPGA Programmable Logic (PL) and configers the hardware  
-You can learn more about overlays from this site [site](https://pynq.readthedocs.io/en/v3.0.0/overlay_design_methodology/overlay_tutorial.html)
+You can learn more about overlays from this site [site](https://pynq.readthedocs.io/en/v3.0.0/overlay_design_methodology/overlay_tutorial.html)  
 To display details about the overlay.
 ```
 overlay?
@@ -232,7 +232,7 @@ overlay?
 dut = overlay.matmul_0
 dut?
 ```
-dut: the Device Under Test, this variable points to the specific hardware block **matmul_0**
+dut: the Device Under Test, this variable points to the specific hardware block **matmul_0**  
 dut?: used to display information about the hardware block
 
 4. **Creating Buffers for I/O**
@@ -249,8 +249,8 @@ np.random.seed(0)
 A[:] = np.random.randint(0, 100, size=(100, 150), dtype=np.int16)
 B[:] = np.random.randint(0, 100, size=(150, 200), dtype=np.int16)
 ```
-A random seed is set for reproducibility.
-Matrices A and B are filled with random integers between 0 and 255.
+the random seed is set for reproducibility  
+Matrices A and B are initaited with random integers between 0 and 255  
 
 6. **Syncing Data to the FPGA**
 ```
