@@ -209,9 +209,9 @@ import pynq
 import time
 import numpy as np
 ```
-pynq: provides python bindings to control the Pynq-Z2 board.  
-time: to measure the execution time (latency).  
-numpy: for array manipulation  
+pynq: this is the PYNQ library, which enables interaction between the host (ARM processor) and the programmable logic (PL)
+time: used for measuring the execution time of the operations.
+numpy: provides support for large, multi-dimensional arrays and matrices, as well as mathematical functions to operate on these arrays.
 
 2. **Overlaying the Bitstream**
 ```
@@ -222,7 +222,7 @@ overlay = pynq.Overlay(bitstream)
 **pynq.overlay** : loads the bitstream onto the FPGA Programmable Logic (PL) and configers the hardware  
 You can learn more about overlays from this site [site](https://pynq.readthedocs.io/en/v3.0.0/overlay_design_methodology/overlay_tutorial.html)
 
-To check your overlay results 
+To display details about the overlay.
 ```
 overlay?
 ```
@@ -231,6 +231,8 @@ overlay?
 dut = overlay.matmul_0
 dut?
 ```
+dut: the Device Under Test, this variable points to the specific hardware block **matmul_0**
+dut?: used to display information about the hardware block
 
 4. **Creating Buffers for I/O**
 ```
@@ -241,15 +243,80 @@ C = pynq.allocate((100, 200), dtype='int16')
 **pynq.allocate** : Allocates memory on both the host (CPU) and device (FPGA) to transfer data between them.
 
 5. **Initialising Input Arrays with Random Values:**
-
 ```
+np.random.seed(0)
 A[:] = np.random.randint(0, 100, size=(100, 150), dtype=np.int16)
 B[:] = np.random.randint(0, 100, size=(150, 200), dtype=np.int16)
 ```
+A random seed is set for reproducibility.
+Matrices A and B are filled with random integers between 0 and 255.
 
+6. **Syncing Data to the FPGA**
+```
+A.sync_to_device()
+B.sync_to_device()
+```
+The sync_to_device() ensures that the data in the matrices is copied from the host's (PS) memory to the PL memory
 
+7. **Setting Hardware Registers**
+```
+dut.register_map.Matrix_A_DRAM_1 = A.device_address & 0xFFFFFFFF
+dut.register_map.Matrix_A_DRAM_2 = A.device_address >> 32
+```
+this code sets up the addresses for matrix A in the FPGA memory. The matrix address are split into two parts (lower and upper 32 bits), why? because the FPGA uses a 64-bit addressing scheme.
+**dut.register_map** refers to the memory-mapped registers in the FPGA that control the operation of the matrix multiplication accelerator.
+
+8. **Accelerating on FPGA**
+```
+start_time = time.time()
+dut.register_map.CTRL.AP_START = 1
+dut.register_map.CTRL[4] = 1
+while not dut.register_map.CTRL.AP_DONE: 
+    pass
+end_time = time.time()
+duration = end_time - start_time
+
+print(f'Kernel completed in {duration * 1000:.2f}ms')
+```
+The accelerator is started by setting **CTRL.AP_START** to 1, which will start the matrix multiplication on the FPGA, after that a loop is initiated so the FPGA to signal that the operation is complete by checking the **CTRL.AP_DONE** flag.
+
+The results below is for a **Optimized Matrix Multipliucation IP on PL**
 ![1](../assets/fig/41.png)
+
+9. **Verifying the Results**
+```
+C.sync_from_device()
+C_cpu = np.matmul(A, B)
+
+if np.allclose(C, C_cpu, atol=1e-5):
+    print("FPGA output matches CPU output! Verification successful.")
+else:
+    print("FPGA output does not match CPU output. Verification failed.")
+```
+After the computation is done, **sync_from_device()** fetches the results of matrix C from the FPGA memory back to the PS memory. The **np.matmul()** function is used to perform matrix multiplication on the CPU for comparison. **np.allclose()** checks if the result from the FPGA (C) is approximately equal to the result computed by the CPU (C_cpu) within a tolerance (atol=1e-5).
+
+10. Freeing the Overlay
+```
+overlay.free()
+```
+This frees the FPGA resources, releasing the overlay and any associated memory buffers.
+
+11. Peform Matrix Multiplication on the PS
+```
+start_time = time.time()
+c_host = np.matmul(A, B)
+end_time = time.time()
+duration = end_time - start_time
+
+print(f'PS computation completed in {duration * 1000:.2f}ms')
+```
+The results below is for a **Optimized Matrix Multipliucation IP on PS**
 ![1](../assets/fig/42.png)
+
+**Conclusion : by comparing the results of running the Optimized Matrix Multiplcation on PL vs PS (2.31ms vs 268.55) we achieved x100 better results! Remmber that the CPU in the PS runs on a clock frequency of GHz unit compred to the PL that runs on 100MHz, so baically slower clock rate and we still beat the CPU
+Crazy? Yup, this is the Power of custoimized designs and FPGA**
+
+12. Close and Halt the Notebook.
 ![1](../assets/fig/43.png)
 
 
