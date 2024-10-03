@@ -18,7 +18,6 @@ vivado
 ```
 Vivado Welcome widnow will pop-up 
 ![1](../assets/fig/1.png)
-initiated
 
 2. Click on **Create Project** from the Quick Start menu, a new window will pop-up, click **Next**
 ![1](../assets/fig/2.png)
