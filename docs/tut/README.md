@@ -268,7 +268,7 @@ dut.register_map.Matrix_A_DRAM_2 = A.device_address >> 32
 this code sets up the addresses for matrix A in the FPGA memory. The matrix address are split into two parts (lower and upper 32 bits), why? because the FPGA uses a 64-bit addressing scheme   
 **dut.register_map** refers to the memory-mapped registers in the FPGA that control the operation of the matrix multiplication accelerator  
 
-8. **Accelerating on FPGA**  
+8. **Accelerating on FPGA**
 ```
 start_time = time.time()
 dut.register_map.CTRL.AP_START = 1
@@ -276,7 +276,6 @@ dut.register_map.CTRL[4] = 1
 while not dut.register_map.CTRL.AP_DONE: pass
 end_time = time.time()
 duration = end_time - start_time
-
 print(f'Kernel completed in {duration * 1000:.2f}ms')
 ```
 
