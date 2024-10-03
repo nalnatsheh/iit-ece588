@@ -309,7 +309,6 @@ start_time = time.time()
 c_host = np.matmul(A, B)
 end_time = time.time()
 duration = end_time - start_time
-
 print(f'PS computation completed in {duration * 1000:.2f}ms')
 ```
 The results below is for a **Optimized Matrix Multipliucation IP on PS**
