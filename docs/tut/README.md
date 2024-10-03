@@ -189,7 +189,9 @@ A. Acces Jupyter Notebook and upload matmul.ipynb notebook :
 3. Navigate to **216.47.144.102:588xx**  
 **NOTE : you need to change xx with your group number** for example, you are in group number 1, the below address will access PYNQ-Z2 board number 1.
 ```
-216.47.144.102:58801
+216.47.144.102:58801n of the matrix multiplication accelerator
+
+Accelerating on FPGA
 ```
 ![1](../assets/fig/37.png)
 
@@ -273,13 +275,13 @@ this code sets up the addresses for matrix A in the FPGA memory. The matrix addr
 start_time = time.time()
 dut.register_map.CTRL.AP_START = 1
 dut.register_map.CTRL[4] = 1
-while not dut.register_map.CTRL.AP_DONE: 
-    pass
+while not dut.register_map.CTRL.AP_DONE: pass
 end_time = time.time()
 duration = end_time - start_time
 
 print(f'Kernel completed in {duration * 1000:.2f}ms')
 ```
+
 The accelerator is started by setting **CTRL.AP_START** to 1, which will start the matrix multiplication on the FPGA, after that a loop is initiated so the FPGA to signal that the operation is complete by checking the **CTRL.AP_DONE** flag  
 
 The results below is for an **Optimized Matrix Multipliucation IP on PL**. For the unoptimized HLS IP, you should see a number around ~55ms! 
