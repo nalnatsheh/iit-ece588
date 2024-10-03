@@ -137,7 +137,6 @@ You should see the output as below  :
 ```
 $ ./project_1/project_1.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
 ```
-
 Copy the hardware handoff to your lab3/part1 directory by typing the command below  :
 ```
 $ cp ./project_1/project_1.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh .
@@ -151,7 +150,6 @@ You should see the output as below  :
 ```
 $ ./project_1/project_1.runs/impl_1/design_1_wrapper.bit
 ```
-
 Copy the bitstream to your lab3/part1 directory by typing the command below  :
 ```
 cp ./project_1/project_1.runs/impl_1/design_1_wrapper.bit .
@@ -164,21 +162,21 @@ mv design_1_wrapper.bit matmul.bit
 ```
 **NOTE : I HAVE NO CLUE WHY VIVADO TOOL HAVE THIS REQUIRMENT, AND WHY THEY DON'T GENERATE BOTH FILES WITH THE SAME NAME AUTOMATICALLY!!!! GO FIGURE**
 
-6. Now, we need to copy both files to the PYNQ-Z2 board , to do so type the follwoing command : 
+4. Now, we need to copy both files to the PYNQ-Z2 board, to do so type the follwoing command : 
 ```
 scp -rP x588 matmul.hwh matmul.bit xilinx@216.47.144.102:/home/xilinx/
 ```
-**NOTE : for you need to change x with your group number** for example, you are in group number 1, the below command will copy the files to PYNQ-Z2 board number 1. 
+**NOTE : You need to change x with your group number** for example, you are in group number 1, the below command will copy the files to PYNQ-Z2 board number 1. 
 ```
 scp -rP 1588 matmul.hwh matmul.bit xilinx@216.47.144.102:/home/xilinx/
 ```
-
-7. It will ask you for a password, the password is **xilinx** (yes all small letters, no spaces, no numbers, no special characters!) 
+**EACH GROUP HAVE A UNIQUE PORT NUMBER, ONLY COPY AND ACCESS THE PYNQ-Z2 BOARD THAT WAS ASSIGNED TO YOU ACCORDING TO THE EXCEL SHEET**
+5. It will ask you for a password, the password is **xilinx** (yes all small letters, no spaces, no numbers, no special characters!) 
 ```
 $ xilinx@216.47.144.102's password:
 ```
 
-## Part 4 : Accelearte the HLS IP on PYNQ-Z2 board, and 
+## **Part 4 : Accelearte the HLS IP on PYNQ-Z2 board, and **
 
 1. Login to your account on Hunmin server, at this point I will trust that you know how to get to the below image and login to your account! (Establish a vncserver connection, and type your password and the generated port number). If you absolutely have no clue, navigate to this [site](http://www.ece.iit.edu/ecesysdocs/) .
 ![1](../assets/fig/35.png)
