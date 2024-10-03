@@ -280,9 +280,9 @@ duration = end_time - start_time
 
 print(f'Kernel completed in {duration * 1000:.2f}ms')
 ```
-The accelerator is started by setting **CTRL.AP_START** to 1, which will start the matrix multiplication on the FPGA, after that a loop is initiated so the FPGA to signal that the operation is complete by checking the **CTRL.AP_DONE** flag.
+The accelerator is started by setting **CTRL.AP_START** to 1, which will start the matrix multiplication on the FPGA, after that a loop is initiated so the FPGA to signal that the operation is complete by checking the **CTRL.AP_DONE** flag  
 
-The results below is for a **Optimized Matrix Multipliucation IP on PL**
+The results below is for an **Optimized Matrix Multipliucation IP on PL**. For the unoptimized HLS IP, you should see a number around ~55ms! 
 ![1](../assets/fig/41.png)
 
 9. **Verifying the Results**
