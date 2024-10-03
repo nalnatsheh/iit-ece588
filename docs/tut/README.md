@@ -291,7 +291,6 @@ if np.allclose(C, C_cpu, atol=1e-5):
 else:
     print("FPGA output does not match CPU output. Verification failed.")
 ```
-
 After the computation is done, **sync_from_device()** fetches the results of matrix C from the FPGA memory back to the PS memory. The **np.matmul()** function is used to perform matrix multiplication on the CPU for comparison. **np.allclose()** checks if the result from the FPGA (C) is approximately equal to the result computed by the CPU (C_cpu) within a tolerance (atol=1e-5).
 
 10. Freeing the Overlay
