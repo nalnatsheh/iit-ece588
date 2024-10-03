@@ -176,7 +176,7 @@ scp -rP 1588 matmul.hwh matmul.bit xilinx@216.47.144.102:/home/xilinx/
 $ xilinx@216.47.144.102's password:
 ```
 
-## **Part 4 : Accelearte the HLS IP on PYNQ-Z2 board, and **
+## **Part 4 : Accelearte the HLS IP on PYNQ-Z2 board**
 
 1. Login to your account on Hunmin server, at this point I will trust that you know how to get to the below image and login to your account! (Establish a vncserver connection, and type your password and the generated port number). If you absolutely have no clue, navigate to this [site](http://www.ece.iit.edu/ecesysdocs/) .
 ![1](../assets/fig/35.png)
@@ -184,8 +184,8 @@ $ xilinx@216.47.144.102's password:
 2. Invoke the web browser **Firefox**, click on **Applications** → **Firefox**
 ![1](../assets/fig/36.png)
 
-3. Navigate to **216.47.144.102:588xx**
-**NOTE : for you need to change xx with your group number** for example, you are in group number 1, the below command will copy the files to PYNQ-Z2 board number 1.
+3. Navigate to **216.47.144.102:588xx**  
+**NOTE : you need to change xx with your group number** for example, you are in group number 1, the below command will copy the files to PYNQ-Z2 board number 1.
 ```
 216.47.144.102:58801
 ```
