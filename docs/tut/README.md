@@ -149,6 +149,7 @@ find . -type f -name "*.bit"
 ```
 You should see the output as below  :
 ```
+
 $ ./project_1/project_1.runs/impl_1/design_1_wrapper.bit
 ```
 Copy the bitstream to your lab3/part1 directory by typing the command below  :
@@ -314,10 +315,10 @@ print(f'PS computation completed in {duration * 1000:.2f}ms')
 The results below is for a **Optimized Matrix Multipliucation IP on PS**
 ![1](../assets/fig/42.png)
 
-**Conclusion : by comparing the results of running the Optimized Matrix Multiplcation on PL vs PS (2.31ms vs 268.55) we achieved x100 better results! Remmber that the CPU in the PS runs on a clock frequency of GHz unit compred to the PL that runs on 100MHz, so baically slower clock rate and we still beat the CPU
+**Conclusion : by comparing the results we got from running HLS IP on PL vs PS (2.31ms vs 268.55) we achieved x100 better results! RemEmber that the CPU in the PS runs on a clock frequency of GHz unit compred to the PL that runs on 100MHz, so baically slower clock rate and we still beat the CPU!
 Crazy? Yup, this is the Power of custoimized designs and FPGA**
 
-12. Close and Halt the Notebook.
+12. Close and Halt the Notebook  
 ![1](../assets/fig/43.png)
 
 
