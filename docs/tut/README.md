@@ -221,11 +221,11 @@ overlay = pynq.Overlay(bitstream)
 **bitstream** : this file contains the hardware configuration for the targeted FPGA
 **pynq.overlay** : loads the bitstream onto the FPGA Programmable Logic (PL) and configers the hardware  
 You can learn more about overlays from this site [site](https://pynq.readthedocs.io/en/v3.0.0/overlay_design_methodology/overlay_tutorial.html)
-
 To display details about the overlay.
 ```
 overlay?
 ```
+
 3. **Accessing the top-level design and checking the details**
 ```
 dut = overlay.matmul_0
