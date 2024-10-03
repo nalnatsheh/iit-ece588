@@ -149,7 +149,6 @@ find . -type f -name "*.bit"
 ```
 You should see the output as below  :
 ```
-
 $ ./project_1/project_1.runs/impl_1/design_1_wrapper.bit
 ```
 Copy the bitstream to your lab3/part1 directory by typing the command below  :
