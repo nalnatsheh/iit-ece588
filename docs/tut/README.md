@@ -177,6 +177,7 @@ $ xilinx@216.47.144.102's password:
 ```
 
 ## **Part 4 : Accelearte the HLS IP on PYNQ-Z2 board**
+A. Acces Jupyter Notebook and upload matmul.ipynb notebook : 
 
 1. Login to your account on Hunmin server, at this point I will trust that you know how to get to the below image and login to your account! (Establish a vncserver connection, and type your password and the generated port number). If you absolutely have no clue, navigate to this [site](http://www.ece.iit.edu/ecesysdocs/) .
 ![1](../assets/fig/35.png)
@@ -200,7 +201,7 @@ $ xilinx@216.47.144.102's password:
 6. Double click on **mamtmul.ipynb** notebook to open it
 ![1](../assets/fig/40.png)
 
-## Part 5 : understanding the matmul.ipynb notebook 
+B. Understanding the matmul.ipynb notebook 
 This notebook will perform the matrix multiplication on the Pynq-Z2 FPGA, overlay a hardware design, and compare the performance of the matrix multiplication between the FPGA's Programmable Logic (PL) and the Processing System (PS). Here's an explanation of each part of the code:
 1. **Importing required libraries**
 ```
