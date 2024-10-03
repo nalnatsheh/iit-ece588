@@ -265,8 +265,8 @@ The sync_to_device() ensures that the data in the matrices is copied from the ho
 dut.register_map.Matrix_A_DRAM_1 = A.device_address & 0xFFFFFFFF
 dut.register_map.Matrix_A_DRAM_2 = A.device_address >> 32
 ```
-this code sets up the addresses for matrix A in the FPGA memory. The matrix address are split into two parts (lower and upper 32 bits), why? because the FPGA uses a 64-bit addressing scheme.  
-**dut.register_map** refers to the memory-mapped registers in the FPGA that control the operation of the matrix multiplication accelerator.  
+this code sets up the addresses for matrix A in the FPGA memory. The matrix address are split into two parts (lower and upper 32 bits), why? because the FPGA uses a 64-bit addressing scheme   
+**dut.register_map** refers to the memory-mapped registers in the FPGA that control the operation of the matrix multiplication accelerator  
 
 8. **Accelerating on FPGA**  
 ```
