@@ -313,9 +313,5 @@ The results below is for a **Optimized Matrix Multipliucation IP on PS**
 12. Close and Halt the Notebook  
 ![1](../assets/fig/43.png)
 
-**Conclusion : by comparing the results we got from running HLS IP on PL vs PS (2.31ms vs 268.55) we achieved ~x115 better results! RemEmber that the CPU in the PS runs on a clock frequency of GHz unit compred to the PL that runs on 100MHz, so baically slower clock rate and we still beat the CPU!
-Crazy? Yup, this is the Power of custoimized designs and FPGA**
-
-
-
-
+**Conclusion : by comparing the results we got from running HLS IP on PL vs PS (2.31ms vs 268.55) we achieved ~x115 better results! Remember that the CPU in the PS runs on a clock frequency of GHz unit compred to the PL that runs on 100MHz, so baically slower clock rate and we still beat the CPU!
+Crazy? Yup, this is the Power of customized harwdare and FPGA device**
