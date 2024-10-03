@@ -18,6 +18,7 @@ vivado
 ```
 Vivado Welcome widnow will pop-up 
 ![1](../assets/fig/1.png)
+initiated
 
 2. Click on **Create Project** from the Quick Start menu, a new window will pop-up, click **Next**
 ![1](../assets/fig/2.png)
@@ -250,7 +251,7 @@ A[:] = np.random.randint(0, 100, size=(100, 150), dtype=np.int16)
 B[:] = np.random.randint(0, 100, size=(150, 200), dtype=np.int16)
 ```
 the random seed is set for reproducibility  
-Matrices A and B are initaited with random integers between 0 and 255  
+Matrices A and B are initiated with random integers between 0 and 255  
 
 6. **Syncing Data to the FPGA**
 ```
