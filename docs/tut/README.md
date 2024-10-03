@@ -199,7 +199,7 @@ A. Acces Jupyter Notebook and upload matmul.ipynb notebook :
 5. Once you login, you need to upload the notebook **matmul.ipynb** provided to you. Click on upload and find your notebook file under lab3/part1 directory
 ![1](../assets/fig/39.png)
 
-6. Double click on **mamtmul.ipynb** notebook to open it
+6. Double click on **mamtmul.ipynb** notebook to open it, click on run to execute the cells
 ![1](../assets/fig/40.png)
 
 B. Understanding the matmul.ipynb notebook  
