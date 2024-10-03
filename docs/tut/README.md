@@ -1,4 +1,4 @@
-# Tutorial I: On-board FPGA Acceleration of Case Study I (Matrix Multiplication): 
+# Tutorial I: On-board FPGA Acceleration of Case Study I (Unoptimized Matrix Multiplication): 
 
 ## **Part 1 : Create the Matrix Multipliation IP via the VitisHLS Solution**
 1. Under your lab3/part1 directory, type the below command : 
@@ -102,7 +102,7 @@ Since, our HLS IP has two bundles, we need to create 2 AXI slave buses in the co
 ![1](../assets/fig/26.png)
 
 ### C. Create a HDL Wrapper and generate the bitstream
-1. Now to create a HDL wrapper, click on **design_1** → **Create HDL Wrapper**
+1. Now to create a HDL wrapper, navigate to Sources, and under design sources, right click on **design_1** → **Create HDL Wrapper**
 ![1](../assets/fig/27.png)
 
 2. A new window will pop-up, select **Let Vivado manage wrapper and auto-update** click **OK**
@@ -115,10 +115,10 @@ The **No Implementation Results Avaialble** window will pop-up, click **Yes**
 4. The below window will popup, click **OK**
 ![1](../assets/fig/31.png)
 
-5. Vivado tool will now run sythesis → implementation and then it will generate the **bitstream**, when the Bitstream Generation is Completed, you will see the below window. Click on **Open Implemented Design**  
+5. Vivado tool will now run sythesis → implementation → and then it will generate the **bitstream**, when the Bitstream Generation is Completed, you will see the below window. Click on **Open Implemented Design**  
 ![1](../assets/fig/32.png)
 
-6. You will see xx, along with the Design Timing Summary.
+6. You will see the implemented design. Vivado IDE opens the implemented netlist and applies the physical and timing constraints used during implementation, placement, and routing results against the implemented part, along with the Design **Timing Summary**.
 ![1](../assets/fig/33.png)
 
 7. Navigate to the **Power**, and you should see the summary window like below :
@@ -126,7 +126,7 @@ The **No Implementation Results Avaialble** window will pop-up, click **Yes**
 
 8. Quit Vivado!
 
-## Part 3 : Copy the bitstream and the hardware handoff to FPGA board
+## **Part 3 : Copy the bitstream and the hardware handoff to FPGA board**
 You should be under lab3/part1 directory, now we need to find the **.bit** and **.hwh** files and copy them to our PYNQ-Z2 Board
 
 1. To find the hardware handoff, type the below command: 
@@ -138,12 +138,12 @@ You should see the output as below  :
 $ ./project_1/project_1.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
 ```
 
-2. Copy the hardware handoff to your lab3/part1 directory by typing the command below  :
+Copy the hardware handoff to your lab3/part1 directory by typing the command below  :
 ```
 $ cp ./project_1/project_1.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh .
 ```
 
-3. To find the bitstream, type the below command: 
+2. To find the bitstream, type the below command: 
 ```
 find . -type f -name "*.bit"
 ```
@@ -152,12 +152,12 @@ You should see the output as below  :
 $ ./project_1/project_1.runs/impl_1/design_1_wrapper.bit
 ```
 
-4. Copy the bitstream to your lab3/part1 directory by typing the command below  :
+Copy the bitstream to your lab3/part1 directory by typing the command below  :
 ```
 cp ./project_1/project_1.runs/impl_1/design_1_wrapper.bit .
 ```
 
-5. Xilinx have a requirment that the hardware handoff and the bitstream files names needs to match to run on the FPGA board, hence let's change them to **matmul.hwh**, and **matmul.bit** respectively, to do so  type the below commands seperatley  :
+3. Xilinx have a requirment that the hardware handoff and the bitstream files names needs to match to run on the FPGA board, hence let's change them to **matmul.hwh**, and **matmul.bit** respectively, to do so  type the below commands seperatley  :
 ```
 mv design_1.hwh matmul.hwh
 mv design_1_wrapper.bit matmul.bit
