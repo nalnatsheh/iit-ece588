@@ -201,24 +201,25 @@ A. Acces Jupyter Notebook and upload matmul.ipynb notebook :
 6. Double click on **mamtmul.ipynb** notebook to open it
 ![1](../assets/fig/40.png)
 
-B. Understanding the matmul.ipynb notebook 
+B. Understanding the matmul.ipynb notebook  
 This notebook will perform the matrix multiplication on the Pynq-Z2 FPGA, overlay a hardware design, and compare the performance of the matrix multiplication between the FPGA's Programmable Logic (PL) and the Processing System (PS). Here's an explanation of each part of the code:
+
 1. **Importing required libraries**
 ```
 import pynq
 import time
 import numpy as np
 ```
-pynq: this is the PYNQ library, which enables interaction between the host (ARM processor) and the programmable logic (PL)
-time: used for measuring the execution time of the operations.
-numpy: provides support for large, multi-dimensional arrays and matrices, as well as mathematical functions to operate on these arrays.
+pynq: this is the PYNQ library, which enables interaction between the host (ARM processor) and the programmable logic (PL)  
+time: used for measuring the execution time of the operations  
+numpy: provides support for large, multi-dimensional arrays and matrices, as well as mathematical functions to operate on these arrays  
 
 2. **Overlaying the Bitstream**
 ```
 bitstream = "/home/xilinx/matmul.bit"
 overlay = pynq.Overlay(bitstream)
 ```
-**bitstream** : this file contains the hardware configuration for the targeted FPGA
+**bitstream** : this file contains the hardware configuration for the targeted FPGA  
 **pynq.overlay** : loads the bitstream onto the FPGA Programmable Logic (PL) and configers the hardware  
 You can learn more about overlays from this site [site](https://pynq.readthedocs.io/en/v3.0.0/overlay_design_methodology/overlay_tutorial.html)
 To display details about the overlay.
