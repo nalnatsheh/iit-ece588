@@ -11,7 +11,7 @@ Below is an image of the 12 PYNQ-Z2 FPGA boards located in DA LAB (SH309).
 
 ## **Lab Descritptions & Tutorials**:
 ---
-* Lab 1 : Evaluation of DNNs Performance on Different Hardware Platforms via the Roofline Plot _(FPGA, GPU, CPU, TPU, and SoC)_
+* Lab 1 : Evaluation of DNNs Performance on Different Hardware Platforms _(FPGA, GPU, CPU, TPU, and SoC)_ via the Roofline Plot 
 <br>
 
 * Lab 2 : Intro to HLS on FPGA with Implementation and Optimization of the KNN Machine Learning Classifier
