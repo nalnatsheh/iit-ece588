@@ -9,10 +9,6 @@ Below is an image of the 12 PYNQ-Z2 FPGA boards located in DA LAB (SH309).
 ![1](./assets/fig/pynq_boards.png)
 
 
-## Lab : 
-
-
-
 ## **Lab Descritptions & Tutorials**:
 ---
 * Lab 1 : Evaluation of Deep Neural Networks Performance on Different Hardware Platforms _(FPGA, GPU, CPU, TPU, and SoC)_
