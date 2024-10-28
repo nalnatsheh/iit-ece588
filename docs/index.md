@@ -19,7 +19,7 @@ Below is an image of the 12 PYNQ-Z2 FPGA boards located in DA LAB (SH309).
 
 * Lab 3 : On-board FPGA Acceleration of the Convolution Layer in DNNs with Vitis→Vivado→PYNQ Framework Flow
   * Case Study II  : First Convolutional Layer in AlexNet  
-  * [Tutorial I](./tut/) : On-board FPGA Acceleration of Case Study I (Unoptimized Matrix Multiplication)<br>
+  * [Tutorial I](./tut/) : On-board FPGA Acceleration of Case Study I (Unoptimized Matrix Multiplication) <br>
 
 
 * Lab 4 : Design Techniques to Accelerate the Convolutional Layer in DNNs on FPGA
