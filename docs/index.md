@@ -13,10 +13,10 @@ Below is an image of the 12 PYNQ-Z2 FPGA boards located in DA LAB (SH309).
 ---
 * Lab 1 : Evaluation of DNNs Performance on Different Hardware Platforms via the Roofline Plot _(FPGA, GPU, CPU, TPU, and SoC)_
   
-* Lab 2 : Intro to HLS on FPGA with Implementation and Optimiazation of the KNN Machine Learning Classifier
+* Lab 2 : Intro to HLS on FPGA with Implementation and Optimization of the KNN Machine Learning Classifier
   * Case Study I : Matrix Multiplication in the Convolution Layer
  
-* Lab 3 : On-board FPGA Acceleration of the Convolution Layer in DNN with Vitis→Vivado→PYNQ Framework Flow
+* Lab 3 : On-board FPGA Acceleration of the Convolution Layer in DNNs with Vitis→Vivado→PYNQ Framework Flow
   * Case Study II  : First Convolutional Layer in AlexNet  
   * [Tutorial I](./tut/) : On-board FPGA Acceleration of Case Study I (Unoptimized Matrix Multiplication)
 
